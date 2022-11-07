@@ -14,13 +14,12 @@ int main(int argc, char **argv, char **env) {
   Verilated::commandArgs(argc, argv);
   // init top verilog instance
   Vsinegen* top = new Vsinegen;
-  
   // init trace dump
   Verilated::traceEverOn(true);
   VerilatedVcdC* tfp = new VerilatedVcdC;
   top->trace (tfp, 99);
   tfp->open ("sinegen.vcd");
-
+ 
   // init Vbuddy
   if (vbdOpen()!=1) return(-1);
   vbdHeader("L2T1: SigGen");
@@ -41,7 +40,7 @@ int main(int argc, char **argv, char **env) {
       top->eval ();
     }
     
-    top->incr = vbdValue();
+    top->incr = vbdValue(); // controls frequency. 
     // plot ROM output and print cycle count
     vbdPlot(int (top->dout), 0, 255);
     vbdCycle(simcyc);

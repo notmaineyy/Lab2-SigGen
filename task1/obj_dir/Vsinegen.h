@@ -30,6 +30,7 @@ class Vsinegen VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&en,0,0);
     VL_IN8(&incr,7,0);
     VL_OUT8(&dout,7,0);
+    VL_IN8(&__pinNumber6,0,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

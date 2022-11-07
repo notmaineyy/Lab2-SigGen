@@ -7,7 +7,7 @@ module sinegen #(
     input   logic                       rst,        // reset
     input   logic                       en,         // enable
     input   logic [D_WIDTH-1:0]         incr,       // increment for addr counter
-    input  logic [D_WIDTH-1:0]         off,
+    input  logic [D_WIDTH-1:0]         addr2,
     output  logic [D_WIDTH-1:0]         dout,        // output data
     output  logic [D_WIDTH-1:0]         dout2        // output data
     
@@ -25,8 +25,8 @@ counter addrCounter(
 
 rom sineRom(
     .clk (clk),
-    .addr (address),
-    .off (off),
+    .addr1 (address),
+    .addr2 (addr2),
     .dout (dout),
     .dout2 (dout2)
 );

@@ -16,6 +16,7 @@ Vsinegen::Vsinegen(VerilatedContext* _vcontextp__, const char* _vcname__)
     , en{vlSymsp->TOP.en}
     , incr{vlSymsp->TOP.incr}
     , dout{vlSymsp->TOP.dout}
+    , __pinNumber6{vlSymsp->TOP.__pinNumber6}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

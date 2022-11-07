@@ -31,7 +31,7 @@ int main(int argc, char **argv, char **env) {
   top->rst = 0;
   top->en = 1;
   top->incr = 1;
-  top->off = 0;
+  top->addr2 = 0;
 
   // run simulation for MAX_SIM_CYC clock cycles
   for (simcyc=0; simcyc<MAX_SIM_CYC; simcyc++) {
@@ -42,7 +42,7 @@ int main(int argc, char **argv, char **env) {
       top->eval ();
     }
     
-    top->off = vbdValue();
+    top->addr2 = vbdValue();
     // plot ROM output and print cycle count
     vbdPlot(int (top->dout), 0, 255);
     vbdPlot(int (top->dout2), 0, 255);

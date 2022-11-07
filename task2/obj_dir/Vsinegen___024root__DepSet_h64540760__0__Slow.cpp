@@ -52,7 +52,7 @@ VL_ATTR_COLD void Vsinegen___024root___ctor_var_reset(Vsinegen___024root* vlSelf
     vlSelf->rst = VL_RAND_RESET_I(1);
     vlSelf->en = VL_RAND_RESET_I(1);
     vlSelf->incr = VL_RAND_RESET_I(8);
-    vlSelf->off = VL_RAND_RESET_I(8);
+    vlSelf->addr2 = VL_RAND_RESET_I(8);
     vlSelf->dout = VL_RAND_RESET_I(8);
     vlSelf->dout2 = VL_RAND_RESET_I(8);
     vlSelf->sinegen__DOT__address = VL_RAND_RESET_I(8);

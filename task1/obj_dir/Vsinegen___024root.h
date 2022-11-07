@@ -18,6 +18,7 @@ class Vsinegen___024root final : public VerilatedModule {
     VL_IN8(en,0,0);
     VL_IN8(incr,7,0);
     VL_OUT8(dout,7,0);
+    VL_IN8(__pinNumber6,0,0);
     CData/*7:0*/ sinegen__DOT__address;
     CData/*0:0*/ __Vclklast__TOP__clk;
     VlUnpacked<CData/*7:0*/, 256> sinegen__DOT__sineRom__DOT__rom_array;

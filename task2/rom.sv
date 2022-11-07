@@ -3,8 +3,8 @@ module rom #(
                 DATA_WIDTH = 8
 )(
     input logic                      clk,
-    input logic [ADDRESS_WIDTH-1:0] addr,
-    input logic [DATA_WIDTH-1:0]    off,
+    input logic [ADDRESS_WIDTH-1:0] addr1,
+    input logic [ADDRESS_WIDTH-1:0]    addr2,
     output logic [DATA_WIDTH-1:0]   dout,
     output logic [DATA_WIDTH-1:0]   dout2
 );
@@ -19,8 +19,8 @@ end;
 always_ff @(posedge clk)
     begin
     // output is synchronous
-    dout <= rom_array [addr];
-    dout2 <= rom_array [addr+off];
+    dout <= rom_array [addr1];
+    dout2 <= rom_array [addr1+addr2];
     end
 
 endmodule

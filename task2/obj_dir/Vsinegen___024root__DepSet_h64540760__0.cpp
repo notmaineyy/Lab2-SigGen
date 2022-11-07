@@ -22,7 +22,7 @@ VL_INLINE_OPT void Vsinegen___024root___sequent__TOP__0(Vsinegen___024root* vlSe
         [vlSelf->sinegen__DOT__address];
     vlSelf->dout2 = vlSelf->sinegen__DOT__sineRom__DOT__rom_array
         [(0xffU & ((IData)(vlSelf->sinegen__DOT__address) 
-                   + (IData)(vlSelf->off)))];
+                   + (IData)(vlSelf->addr2)))];
     vlSelf->sinegen__DOT__address = __Vdly__sinegen__DOT__address;
 }
 
